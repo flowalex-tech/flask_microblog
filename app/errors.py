@@ -3,10 +3,9 @@ from app import app, db
 from flask import render_template, request
 
 
-#@app.errorhandler(400)
-#    def bad_request(error):
-#        """Handle 400 errors."""
-#        return render_template("error/400.html"), 400
+@app.errorhandler(400)
+def bad_request(error):
+    return render_template("error/400.html"), 400
 
 
 @app.errorhandler(401)

@@ -13,9 +13,6 @@ def before_request():
         current_user.last_seen = datetime.utcnow()
         db.session.commit()
 
-bootstrap = Bootstrap(app)
-
-
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
 @login_required

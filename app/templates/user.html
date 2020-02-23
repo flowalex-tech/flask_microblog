@@ -1,5 +1,7 @@
 {% extends "base.html" %}
-
+                {% if user.last_seen %}
+                <p>Last seen on: {{ moment(user.last_seen).format('LLL') }}</p>
+                {% endif %}
 {% block app_content %}
     <table class="table table-hover">
         <tr>

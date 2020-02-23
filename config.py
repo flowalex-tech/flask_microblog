@@ -9,3 +9,6 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     ADMINS = ['flowalex@vivaldi.net']
     POSTS_PER_PAGE = 25
+class Config(object):
+    # ...
+    LANGUAGES = ['en']
