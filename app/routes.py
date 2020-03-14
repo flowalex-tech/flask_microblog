@@ -20,11 +20,11 @@ def before_request():
 def index():
     posts = [
         {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
+            'author': {'username': 'Margaret'},
+            'body': 'Beautiful day in Minneapolis!'
         },
         {
-            'author': {'username': 'Susan'},
+            'author': {'username': 'Adam'},
             'body': 'The Avengers movie was so cool!'
         }
     ]
@@ -53,8 +53,7 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('index'))
-
-
+    
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:
@@ -82,7 +81,7 @@ def user(username):
 @app.route('/edit_profile', methods=['GET', 'POST'])
 @login_required
 def edit_profile():
-    form = EditProfileForm()
+    form = EditProfileForm(current_user.username)
     if form.validate_on_submit():
         current_user.username = form.username.data
         current_user.about_me = form.about_me.data
