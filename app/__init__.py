@@ -8,6 +8,8 @@ from logging.handlers import RotatingFileHandler
 import os
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
+from config import Config
+from flask_babel import Babel, lazy_gettext as _l
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -20,13 +22,6 @@ moment = Moment(app)
 
 from app.errors import bp as errors_bp
 app.register_blueprint(errors_bp)
-
-from app.auth import bp as auth_bp
-app.register_blueprint(auth_bp, url_prefix='/auth')
-
-from app.main import bp as main_bp
-app.register_blueprint(main_bp)
-
 
 if not app.debug:
     if not os.path.exists('logs'):
@@ -41,4 +36,4 @@ if not app.debug:
     app.logger.setLevel(logging.INFO)
     app.logger.info('Microblog startup')
     
-from app import models
+from app import routes, models
