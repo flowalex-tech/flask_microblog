@@ -1,3 +1,2 @@
 include:
-  - template: Container-Scanning.gitlab-ci.yml
   - template: Dependency-Scanning.gitlab-ci.yml
