@@ -1,0 +1,19 @@
+{
+  "enabled": true,
+   "ignoreUnstable": false,
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "automergeType": "branch",
+  "pinDigests": true,
+  "pipenv": {
+    "enabled": true
+  }
+ "reviewers": [
+    "flowalex"
+  ],
+  "assignees": [
+    "flowalex"
+  ]
+}
