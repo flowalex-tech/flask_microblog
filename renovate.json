@@ -9,11 +9,19 @@
   "pinDigests": true,
   "pipenv": {
     "enabled": true
-  }
+  },
  "reviewers": [
     "flowalex"
   ],
   "assignees": [
     "flowalex"
+  ],
+    "hostRules": [
+    {
+      "domainName": "github.com",
+      "encrypted": {
+        "token": "wqj8+H+v8fPDk58aF26i08KPqxvMQ/PJw5GeTMXB9ij68kEeoljiYQNZdepAGgg+bENKogCRTg+rtHuwN5ZhHIv4UciqteAeYCY9MbljqOCQ9lXttYzgDr2z/hd2xGHOQIdqmECouODk/kkP3SrzxGXhKvEm57fGr3qqqaP3yrfQeMqJoV09346JyFaBxwRsjLvK4zQEgfQQWlBLy3c/pfD5PZfwfQDhcfRPl9N1/jT9JRNm1kepDoOCYYNcOis2yi0+uTAxIwncQ32TLCEPKLyFQpNwTcs08/ZzTXTRUbM5nmwK/Xq7WGh9FoGVwHXFAfVEtvln4TtMPsGCR84PlA=="
+      }
+    }
   ]
 }
